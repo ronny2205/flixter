@@ -7,11 +7,18 @@ class Instructor::CoursesController < ApplicationController
 
 	def create
 	    @course = current_user.courses.create(course_params)
-	    redirect_to instructor_course_path(@course)
+	    if @course.valid?
+      		redirect_to instructor_course_path(@course)
+    	else
+      		render :new, :status => :unprocessable_entity
+    	end
   	end
 
   	def show
-    	@course = Course.find(params[:id])
+    	@course = Course.where(:id => params[:id]).first
+	    if @course.blank?
+	      render :text => "404 Not Found", :status => :not_found
+	    end
   	end
 
   	private
