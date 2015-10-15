@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Instructor::CoursesControllerTest < ActionController::TestCase
 
-	test "course show page" do
+	 test "course show page" do
 	    u1 = FactoryGirl.create(:user)
 	    sign_in u1
 	    course = FactoryGirl.create(:course, :user => u1)
