@@ -22,9 +22,9 @@ class Instructor::CoursesControllerTest < ActionController::TestCase
   test "create course" do
     u1 = FactoryGirl.create(:user)
     sign_in u1
-    #course = FactoryGirl.create(:course, :user => u1)
-
+    
     assert_difference 'Course.count' do
+      
     	post :create, :course => {
     			:title => 'Pre Geometry',
     			:description => 'Basic geometric shapes',
@@ -32,7 +32,9 @@ class Instructor::CoursesControllerTest < ActionController::TestCase
     	}
 
     end	
-    #assert_redirected_to instructor_course_path(???)
+    #assert_redirected_to instructor_course_path(x)
+    #assert_redirected_to instructor_courses_path
+
 
   end
 
