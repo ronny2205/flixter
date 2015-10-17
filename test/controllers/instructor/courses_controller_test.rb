@@ -32,7 +32,7 @@ class Instructor::CoursesControllerTest < ActionController::TestCase
     	}
 
     end	
-    #assert_redirected_to instructor_course_path(x)
+    assert_redirected_to instructor_course_path(Course.last)
     #assert_redirected_to instructor_courses_path
 
 

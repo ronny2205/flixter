@@ -1,8 +1,13 @@
-FactoryGirl.define do  factory :lesson do
-    
+FactoryGirl.define do  
+
+  factory :lesson do
+   
+
   end
+
   factory :section do
-    
+     title "Week three"
+     association :course
   end
 
 
