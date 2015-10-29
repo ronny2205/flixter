@@ -20,6 +20,8 @@ class Instructor::CoursesController < ApplicationController
 	    if current_course.blank?
 	      render :text => "404 Not Found", :status => :not_found
 	    end
+
+      @section = Section.new
   	end
 
   	private
