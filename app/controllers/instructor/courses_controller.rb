@@ -22,6 +22,7 @@ class Instructor::CoursesController < ApplicationController
 	    end
 
       @section = Section.new
+      @lesson = Lesson.new
   	end
 
   	private
