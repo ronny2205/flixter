@@ -4,9 +4,10 @@ FactoryGirl.define do  factory :enrollment do
   
 
   factory :lesson do
-   
-
-  end
+    title "sin function"
+    subtitle "everything about sinus"
+    association :section
+  end 
 
   factory :section do
      title "Week three"
@@ -29,4 +30,6 @@ FactoryGirl.define do  factory :enrollment do
     cost "300"
     association :user
   end
+
+  
 end
