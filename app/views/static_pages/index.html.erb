@@ -30,7 +30,7 @@
       <% course2 = Course.find(2) %>
       <%= link_to course2.title, course_path(course2) %>
       <br/><br/>
-      <%= link_to href: course_path(course2) do%>
+      <%= link_to course_path(course2) do %>
         <%= image_tag course2.image, :class => 'img-responsive' %>
       <% end %>
      <% end %>  
