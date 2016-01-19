@@ -17,7 +17,9 @@
   <div class="col-sm-4">
     <h3>
       <% if !Course.where(:id => 1).blank? %> 
-        <%= link_to Course.find(1).title, course_path(Course.find(1)) %>
+        <% course1 = Course.find(1) %>
+        <%= link_to course1.title, course_path(course1) %>
+        <%= image_tag course1.image, :class => 'img-responsive' %>
       <% end %>
     </h3>
   </div>
