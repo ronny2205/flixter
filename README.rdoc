@@ -4,4 +4,4 @@ A two sided video streaming marketplace for teachers and students
 built with Ruby on Rails
 
 The app is deployed at:
-https://flixter-ronny-almog.herokuapp.com/ 
+https://flixter-ronny-almog.herokuapp.com
